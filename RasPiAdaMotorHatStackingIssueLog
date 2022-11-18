@@ -1,0 +1,40 @@
+%Run code.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_bus_device/i2c_device.py", line 176, in __probe_for_device
+    self.i2c.writeto(self.device_address, b"")
+  File "/usr/local/lib/python3.9/dist-packages/busio.py", line 175, in writeto
+    return self._i2c.writeto(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 52, in writeto
+    self._i2c_bus.write_bytes(address, buffer[start:end])
+  File "/usr/local/lib/python3.9/dist-packages/Adafruit_PureIO/smbus.py", line 314, in write_bytes
+    self._device.write(buf)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_bus_device/i2c_device.py", line 182, in __probe_for_device
+    self.i2c.readfrom_into(self.device_address, result)
+  File "/usr/local/lib/python3.9/dist-packages/busio.py", line 165, in readfrom_into
+    return self._i2c.readfrom_into(address, buffer, stop=stop)
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_blinka/microcontroller/generic_linux/i2c.py", line 59, in readfrom_into
+    readin = self._i2c_bus.read_bytes(address, end - start)
+  File "/usr/local/lib/python3.9/dist-packages/Adafruit_PureIO/smbus.py", line 181, in read_bytes
+    return self._device.read(number)
+OSError: [Errno 121] Remote I/O error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/helios/Downloads/examples/CircuitPython 8.x/code.py", line 13, in <module>
+    kit2 = MotorKit(address=0x61)
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_motorkit.py", line 82, in __init__
+    self._pca = PCA9685(i2c, address=address)
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_pca9685.py", line 141, in __init__
+    self.i2c_device = i2c_device.I2CDevice(i2c_bus, address)
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_bus_device/i2c_device.py", line 63, in __init__
+    self.__probe_for_device()
+  File "/usr/local/lib/python3.9/dist-packages/adafruit_bus_device/i2c_device.py", line 185, in __probe_for_device
+    raise ValueError("No I2C device at address: 0x%x" % self.device_address)
+ValueError: No I2C device at address: 0x61
+>>> 

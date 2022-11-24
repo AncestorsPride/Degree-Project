@@ -1,0 +1,672 @@
+[    10.106] 
+X.Org X Server 1.20.11
+X Protocol Version 11, Revision 0
+[    10.106] Build Operating System: linux Raspbian
+[    10.106] Current Operating System: Linux raspberrypi 5.15.76-v7l+ #1597 SMP Fri Nov 4 12:14:58 GMT 2022 armv7l
+[    10.106] Kernel command line: coherent_pool=1M 8250.nr_uarts=1 snd_bcm2835.enable_compat_alsa=0 snd_bcm2835.enable_hdmi=1 video=HDMI-A-1:1920x1200M@60 smsc95xx.macaddr=E4:5F:01:DA:FF:30 vc_mem.mem_base=0x3ec00000 vc_mem.mem_size=0x40000000  console=ttyS0,115200 console=tty1 root=PARTUUID=c8e52268-02 rootfstype=ext4 fsck.repair=yes rootwait quiet splash plymouth.ignore-serial-consoles
+[    10.107] Build Date: 14 November 2022  02:11:45PM
+[    10.107] xorg-server 2:1.20.11-1+rpt1+deb11u3 (https://www.debian.org/support) 
+[    10.107] Current version of pixman: 0.40.0
+[    10.107] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[    10.107] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    10.108] (==) Log file: "/var/log/Xorg.0.log", Time: Wed Nov 23 18:37:30 2022
+[    10.114] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[    10.117] (==) No Layout section.  Using the first Screen section.
+[    10.117] (==) No screen section available. Using defaults.
+[    10.117] (**) |-->Screen "Default Screen Section" (0)
+[    10.117] (**) |   |-->Monitor "<default monitor>"
+[    10.122] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[    10.123] (**) Option "Debug" "dmabuf_capable"
+[    10.123] (==) Automatically adding devices
+[    10.123] (==) Automatically enabling devices
+[    10.123] (==) Automatically adding GPU devices
+[    10.123] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[    10.123] (WW) The directory "/usr/share/fonts/X11/misc" does not exist.
+[    10.124] 	Entry deleted from font path.
+[    10.124] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
+[    10.124] 	Entry deleted from font path.
+[    10.124] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
+[    10.124] 	Entry deleted from font path.
+[    10.124] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
+[    10.124] 	Entry deleted from font path.
+[    10.124] (WW) The directory "/usr/share/fonts/X11/Type1" does not exist.
+[    10.124] 	Entry deleted from font path.
+[    10.124] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[    10.124] 	Entry deleted from font path.
+[    10.124] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[    10.124] 	Entry deleted from font path.
+[    10.124] (==) FontPath set to:
+	built-ins
+[    10.124] (==) ModulePath set to "/usr/lib/xorg/modules"
+[    10.124] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[    10.125] (II) Loader magic: 0x20cf40
+[    10.125] (II) Module ABI versions:
+[    10.125] 	X.Org ANSI C Emulation: 0.4
+[    10.125] 	X.Org Video Driver: 24.1
+[    10.125] 	X.Org XInput driver : 24.1
+[    10.125] 	X.Org Server Extension : 10.0
+[    10.128] (++) using VT number 7
+
+[    10.128] (II) systemd-logind: logind integration requires -keeptty and -keeptty was not provided, disabling logind integration
+[    10.135] (II) xfree86: Adding drm device (/dev/dri/card1)
+[    10.152] (II) xfree86: Adding drm device (/dev/dri/card0)
+[    10.155] (II) no primary bus or device found
+[    10.155] 	falling back to /sys/devices/platform/gpu/drm/card1
+[    10.155] (II) LoadModule: "glx"
+[    10.160] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[    10.212] (II) Module glx: vendor="X.Org Foundation"
+[    10.212] 	compiled for 1.20.11, module version = 1.0.0
+[    10.212] 	ABI class: X.Org Server Extension, version 10.0
+[    10.212] (==) Matched modesetting as autoconfigured driver 0
+[    10.212] (==) Matched fbdev as autoconfigured driver 1
+[    10.213] (==) Assigned the driver to the xf86ConfigLayout
+[    10.213] (II) LoadModule: "modesetting"
+[    10.213] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[    10.218] (II) Module modesetting: vendor="X.Org Foundation"
+[    10.218] 	compiled for 1.20.11, module version = 1.20.11
+[    10.218] 	Module class: X.Org Video Driver
+[    10.218] 	ABI class: X.Org Video Driver, version 24.1
+[    10.218] (II) LoadModule: "fbdev"
+[    10.219] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[    10.221] (II) Module fbdev: vendor="X.Org Foundation"
+[    10.221] 	compiled for 1.20.3, module version = 0.5.0
+[    10.221] 	Module class: X.Org Video Driver
+[    10.221] 	ABI class: X.Org Video Driver, version 24.0
+[    10.221] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    10.222] (II) FBDEV: driver for framebuffer: fbdev
+[    10.250] (II) modeset(0): using drv /dev/dri/card1
+[    10.250] (WW) Falling back to old probe method for fbdev
+[    10.250] (II) Loading sub module "fbdevhw"
+[    10.250] (II) LoadModule: "fbdevhw"
+[    10.251] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[    10.253] (II) Module fbdevhw: vendor="X.Org Foundation"
+[    10.253] 	compiled for 1.20.11, module version = 0.0.2
+[    10.253] 	ABI class: X.Org Video Driver, version 24.1
+[    10.255] (II) modeset(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[    10.255] (==) modeset(0): Depth 24, (==) framebuffer bpp 32
+[    10.255] (==) modeset(0): RGB weight 888
+[    10.255] (==) modeset(0): Default visual is TrueColor
+[    10.255] (II) Loading sub module "glamoregl"
+[    10.255] (II) LoadModule: "glamoregl"
+[    10.256] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[    10.322] (II) Module glamoregl: vendor="X.Org Foundation"
+[    10.322] 	compiled for 1.20.11, module version = 1.0.1
+[    10.322] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    11.776] (II) modeset(0): glamor X acceleration enabled on V3D 4.2
+[    11.777] (II) modeset(0): glamor initialized
+[    11.777] (II) modeset(0): Output HDMI-1 has no monitor section
+[    11.803] (II) modeset(0): Output HDMI-2 has no monitor section
+[    11.813] (II) modeset(0): EDID for output HDMI-1
+[    11.839] (II) modeset(0): EDID for output HDMI-2
+[    11.839] (II) modeset(0): Manufacturer: HWP  Model: 2956  Serial#: 16843009
+[    11.839] (II) modeset(0): Year: 2013  Week: 22
+[    11.839] (II) modeset(0): EDID Version: 1.3
+[    11.839] (II) modeset(0): Digital Display Input
+[    11.839] (II) modeset(0): Max Image Size [cm]: horiz.: 52  vert.: 32
+[    11.839] (II) modeset(0): Gamma: 2.20
+[    11.839] (II) modeset(0): DPMS capabilities: Off
+[    11.839] (II) modeset(0): Supported color encodings: RGB 4:4:4 YCrCb 4:4:4 
+[    11.839] (II) modeset(0): First detailed timing is preferred mode
+[    11.840] (II) modeset(0): redX: 0.644 redY: 0.335   greenX: 0.304 greenY: 0.613
+[    11.840] (II) modeset(0): blueX: 0.146 blueY: 0.070   whiteX: 0.312 whiteY: 0.329
+[    11.840] (II) modeset(0): Supported established timings:
+[    11.840] (II) modeset(0): 640x480@60Hz
+[    11.840] (II) modeset(0): 800x600@60Hz
+[    11.840] (II) modeset(0): 1024x768@60Hz
+[    11.840] (II) modeset(0): Manufacturer's mask: 0
+[    11.840] (II) modeset(0): Supported standard timings:
+[    11.840] (II) modeset(0): #0: hsize: 1920  vsize 1080  refresh: 60  vid: 49361
+[    11.840] (II) modeset(0): #1: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[    11.840] (II) modeset(0): #2: hsize: 1280  vsize 960  refresh: 60  vid: 16513
+[    11.840] (II) modeset(0): #3: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[    11.840] (II) modeset(0): #4: hsize: 1440  vsize 900  refresh: 60  vid: 149
+[    11.840] (II) modeset(0): #5: hsize: 1600  vsize 1200  refresh: 60  vid: 16553
+[    11.840] (II) modeset(0): #6: hsize: 1680  vsize 1050  refresh: 60  vid: 179
+[    11.840] (II) modeset(0): Supported detailed timing:
+[    11.840] (II) modeset(0): clock: 154.0 MHz   Image Size:  518 x 324 mm
+[    11.840] (II) modeset(0): h_active: 1920  h_sync: 1968  h_sync_end 2000 h_blank_end 2080 h_border: 0
+[    11.840] (II) modeset(0): v_active: 1200  v_sync: 1203  v_sync_end 1209 v_blanking: 1235 v_border: 0
+[    11.840] (II) modeset(0): Ranges: V min: 24 V max: 60 Hz, H min: 24 H max: 80 kHz, PixClock max 175 MHz
+[    11.840] (II) modeset(0): Monitor name: HP ZR2440w
+[    11.840] (II) modeset(0): Serial No: CN432206Q7
+[    11.840] (II) modeset(0): Supported detailed timing:
+[    11.840] (II) modeset(0): clock: 148.5 MHz   Image Size:  518 x 324 mm
+[    11.840] (II) modeset(0): h_active: 1920  h_sync: 2008  h_sync_end 2052 h_blank_end 2200 h_border: 0
+[    11.840] (II) modeset(0): v_active: 1080  v_sync: 1084  v_sync_end 1089 v_blanking: 1125 v_border: 0
+[    11.841] (II) modeset(0): Supported detailed timing:
+[    11.841] (II) modeset(0): clock: 148.5 MHz   Image Size:  518 x 324 mm
+[    11.841] (II) modeset(0): h_active: 1920  h_sync: 2448  h_sync_end 2492 h_blank_end 2640 h_border: 0
+[    11.841] (II) modeset(0): v_active: 1080  v_sync: 1084  v_sync_end 1089 v_blanking: 1125 v_border: 0
+[    11.841] (II) modeset(0): Supported detailed timing:
+[    11.841] (II) modeset(0): clock: 74.2 MHz   Image Size:  518 x 324 mm
+[    11.841] (II) modeset(0): h_active: 1280  h_sync: 1390  h_sync_end 1430 h_blank_end 1650 h_border: 0
+[    11.841] (II) modeset(0): v_active: 720  v_sync: 725  v_sync_end 730 v_blanking: 750 v_border: 0
+[    11.841] (II) modeset(0): Supported detailed timing:
+[    11.841] (II) modeset(0): clock: 74.2 MHz   Image Size:  518 x 324 mm
+[    11.841] (II) modeset(0): h_active: 1280  h_sync: 1720  h_sync_end 1760 h_blank_end 1980 h_border: 0
+[    11.841] (II) modeset(0): v_active: 720  v_sync: 725  v_sync_end 730 v_blanking: 750 v_border: 0
+[    11.841] (II) modeset(0): Supported detailed timing:
+[    11.841] (II) modeset(0): clock: 27.0 MHz   Image Size:  518 x 324 mm
+[    11.841] (II) modeset(0): h_active: 720  h_sync: 736  h_sync_end 798 h_blank_end 858 h_border: 0
+[    11.841] (II) modeset(0): v_active: 480  v_sync: 489  v_sync_end 495 v_blanking: 525 v_border: 0
+[    11.841] (II) modeset(0): Number of EDID sections to follow: 1
+[    11.841] (II) modeset(0): EDID (in hex):
+[    11.841] (II) modeset(0): 	00ffffffffffff0022f0562901010101
+[    11.841] (II) modeset(0): 	16170103803420782afc81a4554d9d25
+[    11.841] (II) modeset(0): 	125054210800d1c081c0814081809500
+[    11.841] (II) modeset(0): 	a940b3000101283c80a070b023403020
+[    11.841] (II) modeset(0): 	360006442100001a000000fd00183c18
+[    11.841] (II) modeset(0): 	5011000a202020202020000000fc0048
+[    11.841] (II) modeset(0): 	50205a5232343430770a2020000000ff
+[    11.841] (II) modeset(0): 	00434e34333232303651370a2020017a
+[    11.842] (II) modeset(0): 	02031ff14c901f051404130302070612
+[    11.842] (II) modeset(0): 	0165030c001000230907078301000002
+[    11.842] (II) modeset(0): 	3a801871382d40582c45000644210000
+[    11.842] (II) modeset(0): 	1e023a80d072382d40102c4580064421
+[    11.842] (II) modeset(0): 	00001e011d007251d01e206e28550006
+[    11.842] (II) modeset(0): 	442100001e011d00bc52d01e20b82855
+[    11.842] (II) modeset(0): 	4006442100001e8c0ad08a20e02d1010
+[    11.842] (II) modeset(0): 	3e9600064421000018000000000000c1
+[    11.842] (II) modeset(0): Printing probed modes for output HDMI-2
+[    11.842] (II) modeset(0): Modeline "1920x1200"x60.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    11.842] (II) modeset(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    11.842] (II) modeset(0): Modeline "1920x1080"x50.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    11.842] (II) modeset(0): Modeline "1920x1080"x59.9  148.35  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.4 kHz e)
+[    11.842] (II) modeset(0): Modeline "1920x1080i"x60.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    11.842] (II) modeset(0): Modeline "1920x1080i"x50.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    11.842] (II) modeset(0): Modeline "1920x1080i"x59.9   74.18  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.7 kHz e)
+[    11.842] (II) modeset(0): Modeline "1600x1200"x60.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    11.842] (II) modeset(0): Modeline "1680x1050"x59.9  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    11.842] (II) modeset(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    11.843] (II) modeset(0): Modeline "1440x900"x59.9   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    11.843] (II) modeset(0): Modeline "1280x960"x60.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    11.843] (II) modeset(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    11.843] (II) modeset(0): Modeline "1280x720"x50.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    11.843] (II) modeset(0): Modeline "1280x720"x59.9   74.18  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    11.843] (II) modeset(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    11.843] (II) modeset(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    11.843] (II) modeset(0): Modeline "720x576"x50.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    11.843] (II) modeset(0): Modeline "720x480"x60.0   27.03  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    11.843] (II) modeset(0): Modeline "720x480"x59.9   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    11.843] (II) modeset(0): Modeline "720x480i"x60.0   13.51  720 739 801 858  480 488 494 525 interlace -hsync -vsync (15.8 kHz e)
+[    11.843] (II) modeset(0): Modeline "720x480i"x59.9   13.50  720 739 801 858  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    11.843] (II) modeset(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    11.843] (II) modeset(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    11.843] (II) modeset(0): Output HDMI-1 disconnected
+[    11.843] (II) modeset(0): Output HDMI-2 connected
+[    11.843] (II) modeset(0): Using exact sizes for initial modes
+[    11.843] (II) modeset(0): Output HDMI-2 using initial mode 1920x1200 +0+0
+[    11.843] (==) modeset(0): Using gamma correction (1.0, 1.0, 1.0)
+[    11.843] (==) modeset(0): DPI set to (96, 96)
+[    11.843] (II) Loading sub module "fb"
+[    11.843] (II) LoadModule: "fb"
+[    11.844] (II) Loading /usr/lib/xorg/modules/libfb.so
+[    11.847] (II) Module fb: vendor="X.Org Foundation"
+[    11.847] 	compiled for 1.20.11, module version = 1.0.0
+[    11.847] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[    11.847] (II) UnloadModule: "fbdev"
+[    11.847] (II) Unloading fbdev
+[    11.847] (II) UnloadSubModule: "fbdevhw"
+[    11.847] (II) Unloading fbdevhw
+[    11.988] (==) modeset(0): Backing store enabled
+[    11.988] (==) modeset(0): Silken mouse enabled
+[    12.135] (II) modeset(0): Initializing kms color map for depth 24, 8 bpc.
+[    12.135] (==) modeset(0): DPMS enabled
+[    12.135] (II) modeset(0): [DRI2] Setup complete
+[    12.135] (II) modeset(0): [DRI2]   DRI driver: vc4
+[    12.135] (II) modeset(0): [DRI2]   VDPAU driver: vc4
+[    12.135] (II) Initializing extension Generic Event Extension
+[    12.136] (II) Initializing extension SHAPE
+[    12.136] (II) Initializing extension MIT-SHM
+[    12.137] (II) Initializing extension XInputExtension
+[    12.139] (II) Initializing extension XTEST
+[    12.140] (II) Initializing extension BIG-REQUESTS
+[    12.140] (II) Initializing extension SYNC
+[    12.141] (II) Initializing extension XKEYBOARD
+[    12.141] (II) Initializing extension XC-MISC
+[    12.141] (II) Initializing extension SECURITY
+[    12.142] (II) Initializing extension XFIXES
+[    12.142] (II) Initializing extension RENDER
+[    12.143] (II) Initializing extension RANDR
+[    12.144] (II) Initializing extension COMPOSITE
+[    12.144] (II) Initializing extension DAMAGE
+[    12.144] (II) Initializing extension MIT-SCREEN-SAVER
+[    12.145] (II) Initializing extension DOUBLE-BUFFER
+[    12.145] (II) Initializing extension RECORD
+[    12.146] (II) Initializing extension DPMS
+[    12.146] (II) Initializing extension Present
+[    12.146] (II) Initializing extension DRI3
+[    12.147] (II) Initializing extension X-Resource
+[    12.147] (II) Initializing extension XVideo
+[    12.148] (II) Initializing extension XVideo-MotionCompensation
+[    12.148] (II) Initializing extension SELinux
+[    12.148] (II) SELinux: Disabled on system
+[    12.148] (II) Initializing extension GLX
+[    12.494] (II) AIGLX: Loaded and initialized vc4
+[    12.494] (II) GLX: Initialized DRI2 GL provider for screen 0
+[    12.494] (II) Initializing extension XFree86-VidModeExtension
+[    12.494] (II) Initializing extension XFree86-DGA
+[    12.495] (II) Initializing extension XFree86-DRI
+[    12.496] (II) Initializing extension DRI2
+[    12.499] (II) modeset(0): Damage tracking initialized
+[    12.499] (II) modeset(0): Setting screen physical size to 508 x 317
+[    12.683] (II) config/udev: Adding input device Chicony HP Elite USB Keyboard (/dev/input/event0)
+[    12.684] (**) Chicony HP Elite USB Keyboard: Applying InputClass "libinput keyboard catchall"
+[    12.684] (II) LoadModule: "libinput"
+[    12.684] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
+[    12.697] (II) Module libinput: vendor="X.Org Foundation"
+[    12.697] 	compiled for 1.20.8, module version = 0.30.0
+[    12.697] 	Module class: X.Org XInput Driver
+[    12.697] 	ABI class: X.Org XInput driver, version 24.1
+[    12.697] (II) Using input driver 'libinput' for 'Chicony HP Elite USB Keyboard'
+[    12.697] (**) Chicony HP Elite USB Keyboard: always reports core events
+[    12.697] (**) Option "Device" "/dev/input/event0"
+[    12.701] (**) Option "_source" "server/udev"
+[    12.721] (II) event0  - Chicony HP Elite USB Keyboard: is tagged by udev as: Keyboard
+[    12.721] (II) event0  - Chicony HP Elite USB Keyboard: device is a keyboard
+[    12.722] (II) event0  - Chicony HP Elite USB Keyboard: device removed
+[    12.800] (**) Option "config_info" "udev:/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3/1-1.3:1.0/0003:03F0:034A.0001/input/input0/event0"
+[    12.800] (II) XINPUT: Adding extended input device "Chicony HP Elite USB Keyboard" (type: KEYBOARD, id 6)
+[    12.800] (**) Option "xkb_model" "pc105"
+[    12.800] (**) Option "xkb_layout" "us"
+[    12.806] (II) event0  - Chicony HP Elite USB Keyboard: is tagged by udev as: Keyboard
+[    12.806] (II) event0  - Chicony HP Elite USB Keyboard: device is a keyboard
+[    12.810] (II) config/udev: Adding input device Chicony HP Elite USB Keyboard System Control (/dev/input/event1)
+[    12.810] (**) Chicony HP Elite USB Keyboard System Control: Applying InputClass "libinput keyboard catchall"
+[    12.810] (II) Using input driver 'libinput' for 'Chicony HP Elite USB Keyboard System Control'
+[    12.810] (**) Chicony HP Elite USB Keyboard System Control: always reports core events
+[    12.810] (**) Option "Device" "/dev/input/event1"
+[    12.810] (**) Option "_source" "server/udev"
+[    12.816] (II) event1  - Chicony HP Elite USB Keyboard System Control: is tagged by udev as: Keyboard
+[    12.817] (II) event1  - Chicony HP Elite USB Keyboard System Control: device is a keyboard
+[    12.817] (II) event1  - Chicony HP Elite USB Keyboard System Control: device removed
+[    12.860] (**) Option "config_info" "udev:/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3/1-1.3:1.1/0003:03F0:034A.0002/input/input1/event1"
+[    12.860] (II) XINPUT: Adding extended input device "Chicony HP Elite USB Keyboard System Control" (type: KEYBOARD, id 7)
+[    12.860] (**) Option "xkb_model" "pc105"
+[    12.860] (**) Option "xkb_layout" "us"
+[    12.866] (II) event1  - Chicony HP Elite USB Keyboard System Control: is tagged by udev as: Keyboard
+[    12.867] (II) event1  - Chicony HP Elite USB Keyboard System Control: device is a keyboard
+[    12.870] (II) config/udev: Adding input device Chicony HP Elite USB Keyboard Consumer Control (/dev/input/event2)
+[    12.870] (**) Chicony HP Elite USB Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    12.870] (II) Using input driver 'libinput' for 'Chicony HP Elite USB Keyboard Consumer Control'
+[    12.870] (**) Chicony HP Elite USB Keyboard Consumer Control: always reports core events
+[    12.871] (**) Option "Device" "/dev/input/event2"
+[    12.871] (**) Option "_source" "server/udev"
+[    12.877] (II) event2  - Chicony HP Elite USB Keyboard Consumer Control: is tagged by udev as: Keyboard
+[    12.877] (II) event2  - Chicony HP Elite USB Keyboard Consumer Control: device is a keyboard
+[    12.877] (II) event2  - Chicony HP Elite USB Keyboard Consumer Control: device removed
+[    12.940] (II) libinput: Chicony HP Elite USB Keyboard Consumer Control: needs a virtual subdevice
+[    12.940] (**) Option "config_info" "udev:/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3/1-1.3:1.1/0003:03F0:034A.0002/input/input2/event2"
+[    12.940] (II) XINPUT: Adding extended input device "Chicony HP Elite USB Keyboard Consumer Control" (type: MOUSE, id 8)
+[    12.940] (**) Option "AccelerationScheme" "none"
+[    12.940] (**) Chicony HP Elite USB Keyboard Consumer Control: (accel) selected scheme none/0
+[    12.940] (**) Chicony HP Elite USB Keyboard Consumer Control: (accel) acceleration factor: 2.000
+[    12.940] (**) Chicony HP Elite USB Keyboard Consumer Control: (accel) acceleration threshold: 4
+[    12.947] (II) event2  - Chicony HP Elite USB Keyboard Consumer Control: is tagged by udev as: Keyboard
+[    12.947] (II) event2  - Chicony HP Elite USB Keyboard Consumer Control: device is a keyboard
+[    12.950] (II) config/udev: Adding input device PixArt HP USB Optical Mouse (/dev/input/event3)
+[    12.950] (**) PixArt HP USB Optical Mouse: Applying InputClass "libinput pointer catchall"
+[    12.950] (II) Using input driver 'libinput' for 'PixArt HP USB Optical Mouse'
+[    12.950] (**) PixArt HP USB Optical Mouse: always reports core events
+[    12.950] (**) Option "Device" "/dev/input/event3"
+[    12.950] (**) Option "_source" "server/udev"
+[    12.957] (II) event3  - PixArt HP USB Optical Mouse: is tagged by udev as: Mouse
+[    12.957] (II) event3  - PixArt HP USB Optical Mouse: device is a pointer
+[    12.957] (II) event3  - PixArt HP USB Optical Mouse: device removed
+[    13.000] (**) Option "config_info" "udev:/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.4/1-1.4:1.0/0003:03F0:094A.0003/input/input3/event3"
+[    13.000] (II) XINPUT: Adding extended input device "PixArt HP USB Optical Mouse" (type: MOUSE, id 9)
+[    13.000] (**) Option "AccelerationScheme" "none"
+[    13.000] (**) PixArt HP USB Optical Mouse: (accel) selected scheme none/0
+[    13.000] (**) PixArt HP USB Optical Mouse: (accel) acceleration factor: 2.000
+[    13.001] (**) PixArt HP USB Optical Mouse: (accel) acceleration threshold: 4
+[    13.007] (II) event3  - PixArt HP USB Optical Mouse: is tagged by udev as: Mouse
+[    13.007] (II) event3  - PixArt HP USB Optical Mouse: device is a pointer
+[    13.010] (II) config/udev: Adding input device PixArt HP USB Optical Mouse (/dev/input/mouse0)
+[    13.010] (II) No input driver specified, ignoring this device.
+[    13.010] (II) This device may have been added with another device file.
+[    13.012] (II) config/udev: Adding input device vc4 (/dev/input/event4)
+[    13.012] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.012] (II) Using input driver 'libinput' for 'vc4'
+[    13.012] (**) vc4: always reports core events
+[    13.012] (**) Option "Device" "/dev/input/event4"
+[    13.012] (**) Option "_source" "server/udev"
+[    13.015] (II) event4  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.016] (II) event4  - vc4: device is a pointer
+[    13.016] (II) event4  - vc4: device is a keyboard
+[    13.017] (II) event4  - vc4: device removed
+[    13.060] (II) libinput: vc4: needs a virtual subdevice
+[    13.060] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef00700.hdmi/rc/rc0/input4/event4"
+[    13.060] (II) XINPUT: Adding extended input device "vc4" (type: MOUSE, id 10)
+[    13.060] (**) Option "AccelerationScheme" "none"
+[    13.060] (**) vc4: (accel) selected scheme none/0
+[    13.060] (**) vc4: (accel) acceleration factor: 2.000
+[    13.060] (**) vc4: (accel) acceleration threshold: 4
+[    13.063] (II) event4  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.064] (II) event4  - vc4: device is a pointer
+[    13.064] (II) event4  - vc4: device is a keyboard
+[    13.066] (II) config/udev: Adding input device vc4 (/dev/input/event5)
+[    13.066] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.066] (II) Using input driver 'libinput' for 'vc4'
+[    13.066] (**) vc4: always reports core events
+[    13.066] (**) Option "Device" "/dev/input/event5"
+[    13.066] (**) Option "_source" "server/udev"
+[    13.069] (II) event5  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.069] (II) event5  - vc4: device is a pointer
+[    13.069] (II) event5  - vc4: device is a keyboard
+[    13.071] (II) event5  - vc4: device removed
+[    13.130] (II) libinput: vc4: needs a virtual subdevice
+[    13.130] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef05700.hdmi/rc/rc1/input5/event5"
+[    13.130] (II) XINPUT: Adding extended input device "vc4" (type: MOUSE, id 11)
+[    13.131] (**) Option "AccelerationScheme" "none"
+[    13.131] (**) vc4: (accel) selected scheme none/0
+[    13.131] (**) vc4: (accel) acceleration factor: 2.000
+[    13.131] (**) vc4: (accel) acceleration threshold: 4
+[    13.133] (II) event5  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.134] (II) event5  - vc4: device is a pointer
+[    13.134] (II) event5  - vc4: device is a keyboard
+[    13.152] (**) Chicony HP Elite USB Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+[    13.152] (II) Using input driver 'libinput' for 'Chicony HP Elite USB Keyboard Consumer Control'
+[    13.153] (**) Chicony HP Elite USB Keyboard Consumer Control: always reports core events
+[    13.153] (**) Option "Device" "/dev/input/event2"
+[    13.153] (**) Option "_source" "_driver/libinput"
+[    13.153] (II) libinput: Chicony HP Elite USB Keyboard Consumer Control: is a virtual subdevice
+[    13.153] (**) Option "config_info" "udev:/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3/1-1.3:1.1/0003:03F0:034A.0002/input/input2/event2"
+[    13.153] (II) XINPUT: Adding extended input device "Chicony HP Elite USB Keyboard Consumer Control" (type: KEYBOARD, id 12)
+[    13.153] (**) Option "xkb_model" "pc105"
+[    13.153] (**) Option "xkb_layout" "us"
+[    13.153] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.153] (II) Using input driver 'libinput' for 'vc4'
+[    13.153] (**) vc4: always reports core events
+[    13.153] (**) Option "Device" "/dev/input/event4"
+[    13.153] (**) Option "_source" "_driver/libinput"
+[    13.153] (II) libinput: vc4: is a virtual subdevice
+[    13.153] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef00700.hdmi/rc/rc0/input4/event4"
+[    13.153] (II) XINPUT: Adding extended input device "vc4" (type: KEYBOARD, id 13)
+[    13.154] (**) Option "xkb_model" "pc105"
+[    13.154] (**) Option "xkb_layout" "us"
+[    13.154] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.154] (II) Using input driver 'libinput' for 'vc4'
+[    13.154] (**) vc4: always reports core events
+[    13.154] (**) Option "Device" "/dev/input/event5"
+[    13.154] (**) Option "_source" "_driver/libinput"
+[    13.154] (II) libinput: vc4: is a virtual subdevice
+[    13.154] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef05700.hdmi/rc/rc1/input5/event5"
+[    13.154] (II) XINPUT: Adding extended input device "vc4" (type: KEYBOARD, id 14)
+[    13.154] (**) Option "xkb_model" "pc105"
+[    13.154] (**) Option "xkb_layout" "us"
+[    13.191] (II) config/udev: Adding input device PixArt HP USB Optical Mouse (/dev/input/mouse0)
+[    13.191] (II) No input driver specified, ignoring this device.
+[    13.191] (II) This device may have been added with another device file.
+[    13.191] (II) config/udev: removing device PixArt HP USB Optical Mouse
+[    13.192] (II) event3  - PixArt HP USB Optical Mouse: device removed
+[    13.270] (II) UnloadModule: "libinput"
+[    13.274] (II) config/udev: Adding input device PixArt HP USB Optical Mouse (/dev/input/event3)
+[    13.274] (**) PixArt HP USB Optical Mouse: Applying InputClass "libinput pointer catchall"
+[    13.275] (II) Using input driver 'libinput' for 'PixArt HP USB Optical Mouse'
+[    13.275] (**) PixArt HP USB Optical Mouse: always reports core events
+[    13.275] (**) Option "Device" "/dev/input/event3"
+[    13.275] (**) Option "_source" "server/udev"
+[    13.282] (II) event3  - PixArt HP USB Optical Mouse: is tagged by udev as: Mouse
+[    13.282] (II) event3  - PixArt HP USB Optical Mouse: device is a pointer
+[    13.283] (II) event3  - PixArt HP USB Optical Mouse: device removed
+[    13.320] (**) Option "config_info" "udev:/sys/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.4/1-1.4:1.0/0003:03F0:094A.0003/input/input3/event3"
+[    13.320] (II) XINPUT: Adding extended input device "PixArt HP USB Optical Mouse" (type: MOUSE, id 9)
+[    13.321] (**) Option "AccelerationScheme" "none"
+[    13.321] (**) PixArt HP USB Optical Mouse: (accel) selected scheme none/0
+[    13.321] (**) PixArt HP USB Optical Mouse: (accel) acceleration factor: 2.000
+[    13.321] (**) PixArt HP USB Optical Mouse: (accel) acceleration threshold: 4
+[    13.328] (II) event3  - PixArt HP USB Optical Mouse: is tagged by udev as: Mouse
+[    13.328] (II) event3  - PixArt HP USB Optical Mouse: device is a pointer
+[    13.330] (II) config/udev: removing device vc4
+[    13.331] (II) UnloadModule: "libinput"
+[    13.331] (II) config/udev: removing device vc4
+[    13.331] (II) event4  - vc4: device removed
+[    13.390] (II) UnloadModule: "libinput"
+[    13.391] (II) config/udev: Adding input device vc4 (/dev/input/event4)
+[    13.391] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.391] (II) Using input driver 'libinput' for 'vc4'
+[    13.391] (**) vc4: always reports core events
+[    13.391] (**) Option "Device" "/dev/input/event4"
+[    13.391] (**) Option "_source" "server/udev"
+[    13.394] (II) event4  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.396] (II) event4  - vc4: device is a pointer
+[    13.396] (II) event4  - vc4: device is a keyboard
+[    13.398] (II) event4  - vc4: device removed
+[    13.460] (II) libinput: vc4: needs a virtual subdevice
+[    13.460] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef00700.hdmi/rc/rc0/input4/event4"
+[    13.460] (II) XINPUT: Adding extended input device "vc4" (type: MOUSE, id 10)
+[    13.461] (**) Option "AccelerationScheme" "none"
+[    13.461] (**) vc4: (accel) selected scheme none/0
+[    13.461] (**) vc4: (accel) acceleration factor: 2.000
+[    13.461] (**) vc4: (accel) acceleration threshold: 4
+[    13.466] (II) event4  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.467] (II) event4  - vc4: device is a pointer
+[    13.467] (II) event4  - vc4: device is a keyboard
+[    13.470] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.470] (II) Using input driver 'libinput' for 'vc4'
+[    13.470] (**) vc4: always reports core events
+[    13.470] (**) Option "Device" "/dev/input/event4"
+[    13.470] (**) Option "_source" "_driver/libinput"
+[    13.470] (II) libinput: vc4: is a virtual subdevice
+[    13.470] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef00700.hdmi/rc/rc0/input4/event4"
+[    13.471] (II) XINPUT: Adding extended input device "vc4" (type: KEYBOARD, id 13)
+[    13.471] (**) Option "xkb_model" "pc105"
+[    13.471] (**) Option "xkb_layout" "us"
+[    13.472] (II) config/udev: removing device vc4
+[    13.472] (II) UnloadModule: "libinput"
+[    13.472] (II) config/udev: removing device vc4
+[    13.473] (II) event5  - vc4: device removed
+[    13.550] (II) UnloadModule: "libinput"
+[    13.551] (II) config/udev: Adding input device vc4 (/dev/input/event5)
+[    13.551] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.551] (II) Using input driver 'libinput' for 'vc4'
+[    13.551] (**) vc4: always reports core events
+[    13.551] (**) Option "Device" "/dev/input/event5"
+[    13.551] (**) Option "_source" "server/udev"
+[    13.554] (II) event5  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.554] (II) event5  - vc4: device is a pointer
+[    13.554] (II) event5  - vc4: device is a keyboard
+[    13.555] (II) event5  - vc4: device removed
+[    13.610] (II) libinput: vc4: needs a virtual subdevice
+[    13.610] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef05700.hdmi/rc/rc1/input5/event5"
+[    13.610] (II) XINPUT: Adding extended input device "vc4" (type: MOUSE, id 11)
+[    13.610] (**) Option "AccelerationScheme" "none"
+[    13.610] (**) vc4: (accel) selected scheme none/0
+[    13.610] (**) vc4: (accel) acceleration factor: 2.000
+[    13.610] (**) vc4: (accel) acceleration threshold: 4
+[    13.613] (II) event5  - vc4: is tagged by udev as: Keyboard Pointingstick
+[    13.614] (II) event5  - vc4: device is a pointer
+[    13.614] (II) event5  - vc4: device is a keyboard
+[    13.615] (**) vc4: Applying InputClass "libinput keyboard catchall"
+[    13.615] (II) Using input driver 'libinput' for 'vc4'
+[    13.615] (**) vc4: always reports core events
+[    13.615] (**) Option "Device" "/dev/input/event5"
+[    13.615] (**) Option "_source" "_driver/libinput"
+[    13.615] (II) libinput: vc4: is a virtual subdevice
+[    13.615] (**) Option "config_info" "udev:/sys/devices/platform/soc/fef05700.hdmi/rc/rc1/input5/event5"
+[    13.615] (II) XINPUT: Adding extended input device "vc4" (type: KEYBOARD, id 14)
+[    13.615] (**) Option "xkb_model" "pc105"
+[    13.615] (**) Option "xkb_layout" "us"
+[    16.457] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    16.457] (II) modeset(0): Using EDID range info for horizontal sync
+[    16.457] (II) modeset(0): Using EDID range info for vertical refresh
+[    16.457] (II) modeset(0): Printing DDC gathered Modelines:
+[    16.457] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    16.457] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    16.457] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    16.457] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    16.457] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    16.457] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    16.457] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    16.457] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    16.457] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    16.457] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    16.457] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    16.457] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    16.457] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    16.457] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    16.458] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    16.458] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    16.458] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    16.458] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    17.284] (II) modeset(0): Disabling kernel dirty updates, not required.
+[    17.726] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    17.726] (II) modeset(0): Using hsync ranges from config file
+[    17.726] (II) modeset(0): Using vrefresh ranges from config file
+[    17.726] (II) modeset(0): Printing DDC gathered Modelines:
+[    17.726] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    17.726] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    17.726] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    17.726] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    17.726] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    17.726] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    17.726] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    17.726] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    17.727] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    17.727] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    17.727] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    17.727] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    17.727] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    17.727] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    17.727] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    17.727] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    17.727] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    17.727] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    18.051] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    18.051] (II) modeset(0): Using hsync ranges from config file
+[    18.051] (II) modeset(0): Using vrefresh ranges from config file
+[    18.051] (II) modeset(0): Printing DDC gathered Modelines:
+[    18.051] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    18.051] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    18.051] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    18.051] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.051] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    18.051] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.051] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    18.051] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    18.051] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    18.051] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    18.051] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.051] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.051] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.051] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.051] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    18.051] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    18.051] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    18.051] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    18.096] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    18.096] (II) modeset(0): Using hsync ranges from config file
+[    18.096] (II) modeset(0): Using vrefresh ranges from config file
+[    18.096] (II) modeset(0): Printing DDC gathered Modelines:
+[    18.096] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    18.096] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    18.096] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    18.096] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.096] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    18.096] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.096] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    18.096] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    18.096] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    18.096] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    18.096] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.096] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.096] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.096] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.096] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    18.097] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    18.097] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    18.097] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    18.125] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    18.125] (II) modeset(0): Using hsync ranges from config file
+[    18.125] (II) modeset(0): Using vrefresh ranges from config file
+[    18.125] (II) modeset(0): Printing DDC gathered Modelines:
+[    18.125] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    18.125] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    18.125] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    18.125] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.125] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    18.125] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.125] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    18.125] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    18.126] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    18.126] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    18.126] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.126] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.126] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.126] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.126] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    18.126] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    18.126] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    18.126] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    18.162] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    18.162] (II) modeset(0): Using hsync ranges from config file
+[    18.162] (II) modeset(0): Using vrefresh ranges from config file
+[    18.162] (II) modeset(0): Printing DDC gathered Modelines:
+[    18.162] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    18.162] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    18.162] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    18.162] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.162] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    18.162] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.162] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    18.162] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    18.162] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    18.162] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    18.162] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.162] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.162] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.162] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.162] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    18.162] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    18.162] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    18.162] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    18.192] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    18.192] (II) modeset(0): Using hsync ranges from config file
+[    18.192] (II) modeset(0): Using vrefresh ranges from config file
+[    18.192] (II) modeset(0): Printing DDC gathered Modelines:
+[    18.193] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    18.193] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    18.193] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    18.193] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.193] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    18.193] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.193] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    18.193] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    18.193] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    18.193] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    18.193] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.193] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.193] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.193] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.193] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    18.193] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    18.193] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    18.193] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[    18.447] (II) modeset(0): EDID vendor "HWP", prod id 10582
+[    18.447] (II) modeset(0): Using hsync ranges from config file
+[    18.447] (II) modeset(0): Using vrefresh ranges from config file
+[    18.447] (II) modeset(0): Printing DDC gathered Modelines:
+[    18.447] (II) modeset(0): Modeline "1920x1200"x0.0  154.00  1920 1968 2000 2080  1200 1203 1209 1235 +hsync -vsync (74.0 kHz eP)
+[    18.447] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz e)
+[    18.447] (II) modeset(0): Modeline "1920x1080"x0.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[    18.447] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[    18.448] (II) modeset(0): Modeline "1280x720"x0.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[    18.448] (II) modeset(0): Modeline "720x480"x0.0   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[    18.448] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2008 2052 2200  1080 1084 1094 1125 interlace +hsync +vsync (33.8 kHz e)
+[    18.448] (II) modeset(0): Modeline "1920x1080i"x0.0   74.25  1920 2448 2492 2640  1080 1084 1094 1125 interlace +hsync +vsync (28.1 kHz e)
+[    18.448] (II) modeset(0): Modeline "1440x480i"x0.0   27.00  1440 1478 1602 1716  480 488 494 525 interlace -hsync -vsync (15.7 kHz e)
+[    18.448] (II) modeset(0): Modeline "720x576"x0.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[    18.448] (II) modeset(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[    18.448] (II) modeset(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[    18.448] (II) modeset(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[    18.448] (II) modeset(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[    18.448] (II) modeset(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[    18.448] (II) modeset(0): Modeline "1440x900"x0.0   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[    18.448] (II) modeset(0): Modeline "1600x1200"x0.0  162.00  1600 1664 1856 2160  1200 1201 1204 1250 +hsync +vsync (75.0 kHz e)
+[    18.448] (II) modeset(0): Modeline "1680x1050"x0.0  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)

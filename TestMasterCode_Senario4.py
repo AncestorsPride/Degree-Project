@@ -53,10 +53,6 @@ bottom_limit_sensor=5
 GPIO.setup(top_limit_sensor, GPIO.IN)
 GPIO.setup(bottom_limit_sensor, GPIO.IN)
 
-camera = PiCamera()
-camera.resolution = (640, 480)
-camera.framerate = 15
-rawCapture = PiRGBArray(camera, size=(640, 480))    
 
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -187,13 +183,18 @@ def turn_right(current_angle, angle, phase_speed):
         
 def combined_mask(frame):
     hsv  = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
-    blue = cv2.inRange(hsv,np.array([85,112,0]),np.array([128,255,255]))
-    lit_green  = cv2.inRange(hsv,np.array([50,21,88]),np.array([110,255,255]))
+    blue = cv2.inRange(hsv,np.array([80,88,0]),np.array([128,255,255]))
+    lit_green  = cv2.inRange(hsv,np.array([50,21,74]),np.array([110,255,255]))
     com_mask   = lit_green + blue
     com_mask   = cv2.erode(com_mask, np.ones((5,5)))      #Eroding
     com_mask   = cv2.dilate(com_mask,np.ones((10,10)))     #Dilating
     return com_mask
 
+camera = PiCamera()
+camera.resolution = (640, 480)
+camera.framerate = 15
+rawCapture = PiRGBArray(camera, size=(640, 480))    
+time.sleep(0.1)
 
 while True:
     
@@ -236,27 +237,34 @@ while True:
                 area = cv2.contourArea(contour)       
                 if area < 15000: 
                     message="not found, Area is 15000, "
-                    print_data(1,0.05, 1, message, area)
+                    print_data(1,0.25, 0.5, message, area)
+                    rawCapture.truncate(0)
                     
                 elif area < 25000:
                     message="Area is 25000 22"
                     print_data(1,0.20, 2, message, area)
+                    rawCapture.truncate(0)
                     
                 elif area < 50000:
                     message ="Area is 50000 11"
                     print_data(1,0.15, 2, message, area)
+                    rawCapture.truncate(0)
                     
                 elif area < 150000:
                     message ="Area is 150000 4-5"
-                    print_data(1,0.10, 2, message, area)
-            
+                    print_data(1,0.15, 1, message, area)
+                    rawCapture.truncate(0)
+                    
                 else :
                     #forward(0, 1)
                     print(area)
                     print("Object Obtained")
+                    rawCapture.truncate(0)
                     break
-                
-        backward(0.25,2)
+        
+        time.sleep(2)        
+        backward(0.25,3)
+        retract(0.40)
         print('test end')
        # turn_right(0,0,0)
        # backward(0.2, 3.0)

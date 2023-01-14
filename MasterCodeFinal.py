@@ -281,18 +281,18 @@ while True:
                     print(area)
                     print("Object Obtained")
                     rawCapture.truncate(0)
+                    time.sleep(2)        
+                    backward(0.25,2)
+                    retract(0.40)
                     break
                 
         
-            
-            time.sleep(2)        
-            backward(0.25,2)
-            retract(0.40)
-            print('test end')
-            send = ('approach')
-            r=send.encode()
-            #r=bytes(send) 
-            ser.write(r)
+       
+         print('test end')
+         send = ('approach')
+         r=send.encode()
+         #r=bytes(send) 
+         ser.write(r)
             
             
        # turn_right(0,0,0)

@@ -1,0 +1,22 @@
+from pydub import AudioSegment
+from pydub.playback import play
+
+# Path to your MP3 file
+audio_path = "path/to/your/audiofile.mp3"
+
+# Load the MP3 file
+audio = AudioSegment.from_file(audio_path)
+
+# Set volume percentage (0 to 100)
+volume_percentage = 75  # For example, set to 75% of original volume
+
+# Calculate gain in dBFS for the desired volume percentage
+current_dBFS = audio.dBFS
+target_dBFS = current_dBFS + (volume_percentage / 100 * audio.max_dBFS - current_dBFS)
+audio = audio.apply_gain(target_dBFS - current_dBFS)
+
+# Duration to play in milliseconds (3 minutes = 180000 milliseconds)
+duration = 3 * 60 * 1000
+
+# Play the audio for the specified duration
+play(audio[:duration])

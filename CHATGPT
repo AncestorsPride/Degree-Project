@@ -1,32 +1,39 @@
-import numpy as np
 from pydub import AudioSegment
 from pydub.playback import play
+import time
 
-# Function to generate a sine wave
-def generate_sine_wave(frequency, duration, sample_rate=44100, amplitude=0.5):
-    t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
-    wave = amplitude * np.sin(2 * np.pi * frequency * t)
-    return wave
+# Path to your MP3 file
+audio_path = "path/to/your/audiofile.mp3"
 
-# Parameters for the sine wave
-frequency = 440  # Frequency in Hz (A4 note)
-duration = 1     # Duration in seconds
-sample_rate = 44100  # Samples per second
-amplitude = 0.5  # Amplitude of the wave (0 to 1)
+# Load the MP3 file
+audio = AudioSegment.from_file(audio_path)
 
-# Generate the sine wave
-sine_wave = generate_sine_wave(frequency, duration, sample_rate, amplitude)
+# Calculate the current dBFS and the target dBFS for 10% volume
+current_dBFS = audio.dBFS
+target_dBFS = -20.0  # -20 dBFS is typically used to represent 10% volume
 
-# Convert to 16-bit PCM format
-sine_wave_pcm = (sine_wave * (2**15 - 1)).astype(np.int16)
+# Apply the gain to set the volume to 10%
+gain_needed = target_dBFS - current_dBFS
+audio_at_10_percent = audio.apply_gain(gain_needed)
 
-# Create an AudioSegment from the numpy array
-audio_segment = AudioSegment(
-    sine_wave_pcm.tobytes(),
-    frame_rate=sample_rate,
-    sample_width=sine_wave_pcm.dtype.itemsize,
-    channels=1
-)
+# Duration to play in milliseconds (e.g., 3 minutes = 180000 milliseconds)
+duration = 3 * 60 * 1000
+chunk_duration = 1000  # Play in chunks of 1000 milliseconds (1 second)
 
-# Play the generated sine wave
-play(audio_segment)
+# Play the audio in chunks to simulate real-time adjustment
+start_time = 0
+end_time = chunk_duration
+while start_time < duration:
+    # Extract the chunk
+    chunk = audio_at_10_percent[start_time:end_time]
+    
+    # Play the chunk
+    play(chunk)
+    
+    # Update times for the next chunk
+    start_time += chunk_duration
+    end_time += chunk_duration
+    
+    # Small sleep to simulate real-time playback
+    time.sleep(0.01)
+

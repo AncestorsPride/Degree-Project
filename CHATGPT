@@ -1,22 +1,32 @@
+import numpy as np
 from pydub import AudioSegment
 from pydub.playback import play
 
-# Path to your MP3 file
-audio_path = "path/to/your/audiofile.mp3"
+# Function to generate a sine wave
+def generate_sine_wave(frequency, duration, sample_rate=44100, amplitude=0.5):
+    t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
+    wave = amplitude * np.sin(2 * np.pi * frequency * t)
+    return wave
 
-# Load the MP3 file
-audio = AudioSegment.from_file(audio_path)
+# Parameters for the sine wave
+frequency = 440  # Frequency in Hz (A4 note)
+duration = 1     # Duration in seconds
+sample_rate = 44100  # Samples per second
+amplitude = 0.5  # Amplitude of the wave (0 to 1)
 
-# Set volume percentage (0 to 100)
-volume_percentage = 75  # For example, set to 75% of original volume
+# Generate the sine wave
+sine_wave = generate_sine_wave(frequency, duration, sample_rate, amplitude)
 
-# Calculate gain in dBFS for the desired volume percentage
-current_dBFS = audio.dBFS
-target_dBFS = current_dBFS + (volume_percentage / 100 * audio.max_dBFS - current_dBFS)
-audio = audio.apply_gain(target_dBFS - current_dBFS)
+# Convert to 16-bit PCM format
+sine_wave_pcm = (sine_wave * (2**15 - 1)).astype(np.int16)
 
-# Duration to play in milliseconds (3 minutes = 180000 milliseconds)
-duration = 3 * 60 * 1000
+# Create an AudioSegment from the numpy array
+audio_segment = AudioSegment(
+    sine_wave_pcm.tobytes(),
+    frame_rate=sample_rate,
+    sample_width=sine_wave_pcm.dtype.itemsize,
+    channels=1
+)
 
-# Play the audio for the specified duration
-play(audio[:duration])
+# Play the generated sine wave
+play(audio_segment)
